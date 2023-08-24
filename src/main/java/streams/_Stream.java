@@ -2,6 +2,7 @@ package streams;
 
 
 import java.util.List;
+import java.util.stream.Stream;
 
 import static streams._Stream.Gender.FEMALE;
 import static streams._Stream.Gender.MALE;
@@ -17,7 +18,9 @@ public class _Stream {
         );
 
         // filtering Demo
-        family.stream().filter(p -> p.name.startsWith("M")).forEach(p -> System.out.println(p.name));
+        Stream<Person> m = family.stream().filter(p -> p.name.startsWith("M"));
+        List<Person> listMs = m.toList();
+        m.forEach(p -> System.out.println(p.name));
     }
 
     static class Person{

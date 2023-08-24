@@ -6,7 +6,6 @@ import java.util.stream.Stream;
 
 import static imperative.Main.Gender.FEMALE;
 import static imperative.Main.Gender.MALE;
-
 public class Main {
     public static void main(String[] args) {
         List<Person> family = List.of(

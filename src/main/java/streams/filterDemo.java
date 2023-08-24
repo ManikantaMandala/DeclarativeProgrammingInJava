@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 
 public class filterDemo {
     public static void main(String[] args) {
+        //Example - 1:
         List<Integer> numbers = Arrays.asList(1, 4, 5, 2, 10, 25, 28);
         int[] intArr = new int[]{1, 4, 5 ,2, 10, 25, 28};
         long length = Arrays.stream(intArr).count();
@@ -34,6 +35,9 @@ public class filterDemo {
         //Finding MaxElement
         Optional<Integer> maxElement = numbers.stream().min((a, b) -> b-a);
         System.out.println("The maximum element: " + maxElement.get());
+
+
+        // Example 2:
 
     }
 }
